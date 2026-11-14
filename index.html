@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kore Construction - Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Custom colors inspired by the provided logo
+                        kore: {
+                            rust: '#B55D37', 
+                            rustDark: '#9A4E2D',
+                            grayDark: '#5E5D5D',
+                            grayLight: '#B0B0B0',
+                            black: '#1A1A1A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* A very subtle pattern to give a slight "blueprint/construction" texture without being noisy */
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 text-gray-800 antialiased relative">
+    
+    <!-- Main Content Card -->
+    <main class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden border-t-8 border-kore-rust relative z-10 animate-fade-in-up">
+        <div class="p-10 md:p-16 text-center flex flex-col items-center">
+            
+            <!-- Logo Section -->
+            <div class="mb-10 w-full flex justify-center">
+                <img 
+                    src="/images/Kore Construction House Logo.png" 
+                    alt="Kore Construction Logo" 
+                    class="h-48 md:h-64 w-auto object-contain drop-shadow-sm"
+                >
+            </div>
+
+            <!-- Text Content -->
+            <h1 class="text-3xl md:text-4xl font-bold text-kore-black mb-4 tracking-tight">
+                Pardon our dust.
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto font-light">
+                We are currently laying the foundation for our new website. In the meantime, our team is still hard at work building exceptional spaces. 
+            </p>
+
+            <p class="text-md text-gray-500 mb-10 font-medium">
+                Ready to start your next project? We'd love to hear from you.
+            </p>
+
+            <!-- Call to Action -->
+            <a 
+                href="mailto:home@buildkore.com" 
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-300 bg-kore-rust rounded-lg shadow-lg hover:bg-kore-rustDark hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kore-rust group"
+            >
+                <svg class="w-5 h-5 mr-3 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                home@buildkore.com
+            </a>
+
+        </div>
+        
+        <!-- Footer / Bottom Accent -->
+        <div class="bg-gray-50 px-10 py-6 text-center border-t border-gray-100">
+            <p class="text-sm text-gray-400">
+                &copy; <script>document.write(new Date().getFullYear())</script> Kore Construction
+            </p>
+        </div>
+    </main>
+
+    <!-- Simple CSS Animation -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</body>
+</html>
